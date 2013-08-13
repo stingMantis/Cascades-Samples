@@ -18,7 +18,7 @@ import "QuotesListPage"
 NavigationPane {
     id: nav
 
-    // A reference to to the Page for presenting the page is kept while showing it
+    // A reference to the Page for presenting the page is kept while showing it
     // in order to update its data when deleting and editing the quotes.
     property variant quotePage;
     
@@ -62,7 +62,7 @@ NavigationPane {
     onPopTransitionEnded: {
         // The only occurrence of a pop transition that ends is when the Page
         // with the text in a bubble is pushed by back navigation, this Page
-        // is created each time the a new quote is selected in the list so
+        // is created each time a new quote is selected in the list so
         // in order to avoid memory leaks it is destroyed here.
         if (quotePage == page) {
             page.destroy();
